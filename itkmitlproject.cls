@@ -441,7 +441,7 @@
 
 			\vfill
 
-			\Large{\Author \ รหัสประจำตัว \SId} \\
+			\Large{\Author \ รหัสประจำตัว \SId} \\[0.5cm]
 			\Large{\AuthorTwo \ รหัสประจำตัว \SIdTwo}
 		\end{bfseries}
 
