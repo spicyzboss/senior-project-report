@@ -1,0 +1,37 @@
+\begin{table}[H]
+    \caption{Use Case เพิ่มรายชื่อนักเรียนแบบกลุ่ม}
+    \label{tab:use-case-create-batch-student}
+    \begin{tabularx}{\textwidth}{ | p{3cm} | X | }
+    \hline
+    \textbf{Use Case} & เพิ่มรายชื่อนักเรียนแบบกลุ่ม \\
+    \hline
+    \textbf{Actor} & ผู้ประสานงาน, ผู้ดูแลระบบ \\
+    \hline
+    \textbf{Description} & ผู้ใช้สามารถเพิ่มรายชื่อนักเรียนแบบกลุ่มได้ \\
+    \hline
+    \textbf{Pre-Condition} & ผู้ใช้ต้องทำการเพิ่มข้อมูลนักเรียนลงไปในไฟล์ Excel ในเทมเพลตที่จัดเตรียมไว้ให้ \\
+    \hline
+    \textbf{Post-Condition} & - \\
+    \hline
+    \end{tabularx}
+    \begin{tabularx}{\textwidth}{ | X | X | X | }
+    \multicolumn{3}{|c|}{\textbf{Flow of Events}} \\
+    \hline
+    \multicolumn{1}{|c|}{\textbf{General}} & \multicolumn{1}{|c|}{\textbf{Actor Action}} & \multicolumn{1}{|c|}{\textbf{System Response}} \\
+    \hline
+    1. ผู้ใช้คลิกที่การ์ดนักเรียนเพื่อเข้าสู่ Use Case นี้ & & \\
+    \hline
+    & 2. ผู้ใช้คลิกที่ปุ่มนำเข้านักเรียน & \\
+    \hline
+    & 3. ผู้ใช้คลิกที่ปุ่มอัพโหลดไฟล์ และเลือกไฟล์ Excel ที่ได้จัดเตรียมไว้ & \\
+    \hline
+    & 4. ผู้ใช้เลือกภาษาการสอบของนักเรียนที่ต้องการเพิ่ม & \\
+    \hline
+    & 5. ผู้ใช้คลิกที่ปุ่มนำเข้า & \\
+    \hline
+    & & 6. ระบบเพิ่มนักเรียนลงในฐานข้อมูลสัมพันธ์ \\
+    \hline
+    & & 7. ระบบแจ้งเตือนการเพิ่มนักเรียนสำเร็จให้แก่ผู้ใช้ \\
+    \hline
+    \end{tabularx}
+\end{table}
