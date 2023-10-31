@@ -1,0 +1,29 @@
+\begin{table}[H]
+    \caption{พจนานุกรมข้อมูลของตาราง users}
+    \label{tab:database-users}
+    \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
+    \hline
+    \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
+    \hline
+    id & VARCHAR & 40 & primary\_key & รหัสผู้ใช้ \\
+    \hline
+    username & VARCHAR & 100 & required & ชื่อผู้ใช้ \\
+    \hline
+    prefix & VARCHAR & 100 & required & คำนำหน้า \\
+    \hline
+    first\_name & VARCHAR & 100 & required & ชื่อจริงภาษาไทย \\
+    \hline
+    last\_name & VARCHAR & 100 & required & นามสกุลภาษาไทย \\
+    \hline
+    phone\_number & VARCHAR & 20 & required & หมายเลขโทรศัพท์ \\
+    \hline
+    role & ENUM & 1 & - & ระดับของผู้ใช้ \\
+    \hline
+    status & ENUM & 1 & - & สถานะการยืนยัน \\
+    \hline
+    created\_at & TIMESTAMP & 4 & - & เวลาที่สร้างข้อมูล \\
+    \hline
+    updated\_at & TIMESTAMP & 4 & - & เวลาที่แก้ไขข้อมูลล่าสุด \\
+    \hline
+    \end{tabularx}
+\end{table}

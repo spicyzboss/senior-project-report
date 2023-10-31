@@ -1,0 +1,22 @@
+@startuml
+!theme plain
+left to right direction
+
+"ผู้ประสานงาน" as coordinator
+"ผู้ดูแลระบบ" as admin
+
+package "Bebras Registration System" {
+    usecase "ค้นหารายชื่อนักเรียน" as searchStudents
+    usecase "จัดการรายชื่อนักเรียน" as manageStudents
+    usecase "แสดงข้อมูลประเภทการทดสอบ" as listContests
+    usecase "จัดการประเภทการทดสอบ" as manageContests
+}
+
+coordinator --> searchStudents
+coordinator --> manageStudents
+coordinator --> listContests
+admin --> searchStudents
+admin --> manageStudents
+admin --> listContests
+admin --> manageContests
+@enduml

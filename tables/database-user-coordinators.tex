@@ -1,0 +1,17 @@
+\begin{table}[H]
+    \caption{พจนานุกรมข้อมูลของตาราง user\_coordinators}
+    \label{tab:database-user-coordinators}
+    \begin{tabularx}{\textwidth}{ | p{1.75cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
+    \hline
+    \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
+    \hline
+    user\_id & VARCHAR & 40 & primary\_key, foreign\_key & รหัสผู้ใช้ \\
+    \hline
+    position & TINYTEXT & 1 - 255 & required & ตำแหน่งทางการศึกษา \\
+    \hline
+    identity\_url & TEXT & 2 - 64Kb & required & ลิงก์ของข้อมูลยืนยันตัวตน \\
+    \hline
+    school\_id & VARCHAR & 40 & foreign\_key & รหัสโรงเรียน \\
+    \hline
+    \end{tabularx}
+\end{table}

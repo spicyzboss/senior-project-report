@@ -4,47 +4,162 @@
 \section{ทฤษฎีพัฒนาซอฟแวร์}
 
 \begin{enumerate}
-    \item Conventional Commits
-    \item Git
-    \item Software Development Lifecycle
-    \item Agile
-    \item Trunk-Based Development
+    \item \textbf{Conventional Commits} คือการเขียนคอมมิต (Commit) ให้งาน โดยมีรูปแบบและกฏเกณฑ์ที่แน่นอน เพื่อให้สามารถเขียนคอมมิตได้ง่ายและมีความเข้าใจตรงกัน \cite{CICDConventionalCommits}
+    \item \textbf{Git} คือตัวควบคุมเวอร์ชั่นของงานให้เป็นปัจจุบัน สามารถดูการทำงานย้อมกลับได้ในเวอร์ชั่นก่อนหน้าและมีสามารถติดตามการเปลี่ยนแปลงของงานได้ \cite{BasicGit}
+    \item \textbf{Software Development Lifecycle} คือกระบวนการในการพัฒนาซอฟต์แวร์ที่ประหยัดเวลาและทำให้งานคุ้มค่าที่สุด สามารถลดความเสี่ยงต่าง ๆ และตอบสนองความต้องการได้อย่างดี ประกอบไปด้วย 6 ขั้นตอนคือ การวางแผน การออกแบบ การดำเนินการ การทดสอบ การติดตั้งใช้จริงและการรักษา \cite{WhatIsSDLC}
+    \item \textbf{Agile} คือการทำงานที่รวดเร็วและมีประสิทธิภาพ โดยทุกคนสามารถทำงานร่วมกันได้ โดยการทำงานจะถูกแบ่งออกมาเป็น Sprint เพื่อให้ทุกคนในทีมทราบเป้าหมายของงานในปัจจุบันแล้วถ้าหากเกิดปัญหาจะได้สามารถแก้ไขได้อย่างรวดเร็ว \cite{WhatIsAgile}
+    \item \textbf{Trunk-Based Development} คือการแบ่งงานต่าง ๆ ให้เป็นส่วนเล็ก ๆ แล้วค่อย รวม (Merge) เข้ากับสาขา (Branch) หลัก โดยควรรวมกับสาขาหลักอย่างน้อย 1 ครั้งต่อวันเพื่อลดความผิดพลาดของงาน \cite{TrunkBasedDevelopment}
 \end{enumerate}
+
+\newpage
 
 \section{เทคโนโลยีที่ใช้พัฒนา}
 
 \subsection{Git}
 
-Git คือ ระบบที่ถูกออกแบบมาเพื่อควบคุมเวอร์ชันของงาน (Version Control System) และสามารถติดตามการทำงาน ความเปลี่ยนแปลงต่าง ๆ ในงานได้ โดย Git จะช่วยให้สามารถพัฒนาซอฟต์แวร์ร่วมกับผู้อื่นในทีมการทำงานได้อย่างสะดวกและมีประสิทธิภาพมากขึ้น
+Git คือ ระบบที่ถูกออกแบบมาเพื่อควบคุมเวอร์ชันของงาน (Version Control System) และสามารถติดตามการทำงาน ความเปลี่ยนแปลงต่าง ๆ ในงานได้ โดย Git จะช่วยให้สามารถพัฒนาซอฟต์แวร์ร่วมกับผู้อื่นในทีมการทำงานได้อย่างสะดวกและมีประสิทธิภาพมากขึ้น \cite{BasicGit}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/git.png}
+    \caption{Git Logo}
+    \label{fig:git}
+\end{figure}
 
 \subsection{GitHub}
 
-GitHub คือ เว็บไซต์แพลตฟอร์มที่ช่วยในการติดตามการเปลี่ยนแปลงต่าง ๆ ภายในได้ คอยควบคุมเวอร์ชันการทำงานต่าง ๆ (Version Control) ติดตามประวัติการเปลี่ยนแปลงในโค้ดด้วย Git เป็นที่นิยมในหมู่นักพัฒนาซอฟต์แวร์ ทั้งยังสามารถทำให้ทำงานร่วมกับผู้อื่นได้ มีฟังก์ชันในการตรวจสอบและรีวิวโค้ด สามารถแบ่งปันงานของตัวเองได้
+GitHub คือ เว็บไซต์แพลตฟอร์มที่ช่วยในการติดตามการเปลี่ยนแปลงต่าง ๆ ภายในได้ คอยควบคุมเวอร์ชันการทำงานต่าง ๆ (Version Control) ติดตามประวัติการเปลี่ยนแปลงในโค้ดด้วย Git เป็นที่นิยมในหมู่นักพัฒนาซอฟต์แวร์ ทั้งยังสามารถทำให้ทำงานร่วมกับผู้อื่นได้ มีฟังก์ชันในการตรวจสอบและรีวิวโค้ด สามารถแบ่งปันงานของตัวเองได้ \cite{VCSGitHub}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/github.png}
+    \caption{GitHub Logo}
+    \label{fig:github}
+\end{figure}
 
 \subsection{VSCode (Visual Studio Code)}
 
-VSCode หรือ Visual Studio Code คือ เครื่องมือสำหรับการพัฒนาซอฟต์แวร์เป็นโอเพนชอร์สเป็นตัวช่วยในการแก้ไขโค้ด (Code Editor) รองรับการทำงานหลายภาษาและสามารถติดตั้งปลั๊กอินเพิ่มเติมได้
+VSCode หรือ Visual Studio Code คือ เครื่องมือสำหรับการพัฒนาซอฟต์แวร์เป็นโอเพนชอร์สเป็นตัวช่วยในการแก้ไขโค้ด (Code Editor) รองรับการทำงานหลายภาษาและสามารถติดตั้งปลั๊กอินเพิ่มเติมได้ \cite{KnowVSCode}
 
-\subsection{Neovim}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/vscode.png}
+    \caption{Visual Studio Code Logo}
+    \label{fig:vscode}
+\end{figure}
 
-Neovim คือ โอเพนซอร์สมีการพัฒนาเป็นตัวเลือกที่ปรับปรุงมาจาก Vim (Vi IMproved) ใช้ในการแก้ไขโค้ดเน้นไปที่การใช้งานด้วยคีบอร์ด มีคำสั่งมากมายให้จดจำทำให้ใช้งานได้ยาก แต่กรณีที่ใช้จนคล่องจะเป็นประโยชน์มาก
+\subsection{NeoVim}
 
-\subsection{JetBrains WebStorm}
+NeoVim คือ โอเพนซอร์สมีการพัฒนาเป็นตัวเลือกที่ปรับปรุงมาจาก Vim (Vi IMproved) ใช้ในการแก้ไขโค้ดเน้นไปที่การใช้งานด้วยคีบอร์ด มีคำสั่งมากมายให้จดจำทำให้ใช้งานได้ยาก แต่กรณีที่ใช้จนคล่องจะเป็นประโยชน์มาก
 
-JetBrains WebStorm คือ เครื่องมือที่ช่วยในการแก้ไขโค้ด (IDE - Integrated Development Environment) พัฒนาด้วยภาษา JavaScript รองรับการทำงานกับ ไลบรารี่ (Library) และเฟรมเวิร์ก (Framework) ที่หลากหลาย
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/neovim.png}
+    \caption{NeoVim Logo}
+    \label{fig:neovim}
+\end{figure}
+
+\newpage
+
+% \subsection{JetBrains WebStorm}
+
+% JetBrains WebStorm คือ เครื่องมือที่ช่วยในการแก้ไขโค้ด (IDE - Integrated Development Environment) พัฒนาด้วยภาษา JavaScript รองรับการทำงานกับ ไลบรารี่ (Library) และเฟรมเวิร์ก (Framework) ที่หลากหลาย
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=60mm,scale=1.0]{images/webstorm.png}
+%     \caption{JetBrains WebStorm Logo}
+%     \label{fig:webstorm}
+% \end{figure}
 
 \subsection{React}
 
-React หรือ React.js คือ ไลบรารี่ (Library) ที่เอาไว้ใช้ในการสร้าง User Interfaces สำหรับเว็บแอปพลิเคชัน พัฒนาโดย Facebook ใช้ JSX (JavaScript XML) ในการเขียน UI โค้ดในรูปแบบที่คล้ายกับ HTML ทำให้เข้าใจและใช้งานได้ง่าย
+React หรือ React.js คือ ไลบรารี่ (Library) ที่เอาไว้ใช้ในการสร้าง User Interfaces สำหรับเว็บแอปพลิเคชัน พัฒนาโดย Facebook ใช้ JSX (JavaScript XML) ในการเขียน UI โค้ดในรูปแบบที่คล้ายกับ HTML ทำให้เข้าใจและใช้งานได้ง่าย \cite{ReadyToReactWithJSX}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/react.png}
+    \caption{React Logo}
+    \label{fig:react}
+\end{figure}
 
 \subsection{Next.js}
 
-Next.js คือ Next.js คือเฟรมเวิร์กการพัฒนาเว็บแอปพลิเคชัน (Web Application Framework) เหมือนกับ React แต่ได้รับการพัฒนาและปรับปรุงประสิทธิภาพในการโหลดหน้าทำให้ตัวเว็บแอปพลิเคชันที่เขียนด้วย Next.js มีความรวดเร็วกว่า
+Next.js คือเฟรมเวิร์กการพัฒนาเว็บแอปพลิเคชัน (Web Application Framework) เหมือนกับ React แต่ได้รับการพัฒนาและปรับปรุงประสิทธิภาพในการโหลดหน้าทำให้ตัวเว็บแอปพลิเคชันที่เขียนด้วย Next.js มีความรวดเร็วกว่า \cite{WhatIsNextjs}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/nextjs.png}
+    \caption{Next.js Logo}
+    \label{fig:nextjs}
+\end{figure}
+
+\newpage
 
 \subsection{Golang}
 
-Golang หรือ Go คือ ภาษาโปรแกรมมิ่ง (Programming Language) พัฒนาโดย Google โครงสร้างภาษาเข้าใจง่ายและอ่านง่ายกว่า มีประสิทธิภาพสูงทำให้สามารถทำงานได้อย่างรวดเร็ว
+Golang หรือ Go คือ ภาษาโปรแกรมมิ่ง (Programming Language) พัฒนาโดย Google ในปี 2007 โครงสร้างภาษาเข้าใจง่ายและอ่านง่ายกว่า มีประสิทธิภาพสูงทำให้สามารถทำงานได้อย่างรวดเร็ว \cite{WhatIsGolang}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/golang.png}
+    \caption{Golang Logo}
+    \label{fig:golang}
+\end{figure}
 
 \subsection{GoFiber}
 
-คือ เฟรมเวิร์ก (Framework) สำหรับการพัฒนาแอปพลิเคชันเว็บและเว็บเซิร์ฟเวอร์ด้วยภาษา Go (Golang) มีความใช้งานง่ายจัดการกับ Route ได้อย่างมีประสิทธิภาพ
+GoFiber คือ เฟรมเวิร์ก (Framework) สำหรับการพัฒนาแอปพลิเคชันเว็บและเว็บเซิร์ฟเวอร์ด้วยภาษา Go (Golang) มีความใช้งานง่าย และสามารถจัดการกับ Route ได้อย่างมีประสิทธิภาพ \cite{FiberAndGormRunGolangApp}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/gofiber.png}
+    \caption{GoFiber Logo}
+    \label{fig:gofiber}
+\end{figure}
+
+\subsection{Prisma}
+
+Prisma คือ เครื่องมือสำหรับจัดการฐานข้อมูล (Database Management Tool) ที่ช่วยในการเขียนคำสั่ง SQL ให้ง่ายขึ้น และสามารถเชื่อมต่อกับฐานข้อมูลได้หลากหลายชนิด \cite{WhatIsPrisma}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/prisma.png}
+    \caption{Prisma Logo}
+    \label{fig:prisma}
+\end{figure}
+
+\newpage
+
+\subsection{MySQL}
+
+MySQL คือ ระบบจัดการฐานข้อมูล (Database Management System) ที่เป็นโอเพนซอร์ส สามารถใช้งานได้ฟรี ง่ายต่อการใช้งาน และมีความเสถียรสูง \cite{WhatIsMySQL}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/mysql.png}
+    \caption{MySQL Logo}
+    \label{fig:mysql}
+\end{figure}
+
+\subsection{Docker}
+
+Docker คือ เครื่องมือสำหรับจัดการและสร้าง Container ที่ใช้ในการพัฒนาแอปพลิเคชัน สามารถสร้างและใช้งานได้ง่าย มีความเร็วในการทำงานสูง และสามารถใช้งานได้ในทุกแพลตฟอร์ม \cite{WhatIsDocker}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/docker.png}
+    \caption{Docker Logo}
+    \label{fig:docker}
+\end{figure}
+
+\subsection{Google Cloud Platform}
+
+Google Cloud Platform คือ แพลตฟอร์มคลาวด์ (Cloud Platform) ที่ให้บริการในรูปแบบของ IaaS (Infrastructure as a Service) และ PaaS (Platform as a Service) พัฒนาโดย Google มีความเสถียรสูง และมีความปลอดภัยสูง \cite{GCPNewbie}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=60mm,scale=1.0]{images/gcp.png}
+    \caption{Google Cloud Platform Logo}
+    \label{fig:gcp}
+\end{figure}
