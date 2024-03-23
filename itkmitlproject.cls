@@ -168,13 +168,13 @@
 \titlecontents{chapter}[0mm]
 {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
 {\chaptername\hspace{1ex}\thecontentslabel\hspace{2mm}}
-{}{\hfill \contentspage}
+{}{\titlerule*[0.5pc]{.} \contentspage}
 
 % tocitem format for section
 \titlecontents{section}[0mm]
 {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
 {\hspace{6ex}\thecontentslabel\hspace{2mm}}{\hspace{6ex}\thecontentslabel\hspace{2mm}}
-{\hfill \contentspage}
+{\titlerule*[0.5pc]{.} \contentspage}
 
 % ##### LOT Overrided
 \newcommand{\lotheadcont}[3]{
@@ -206,7 +206,10 @@
     \cleardoublepage
 }
 
-\titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
+\titlecontents{table}[0mm]
+{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}
+{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}
+{}{\titlerule*[0.5pc]{.} \contentspage}
 
 % ##### LOF Overridden
 \newcommand{\lofheadcont}[3]{
@@ -240,7 +243,10 @@
 }
 
 % Indent the next line of the entry by the width of the label with \contentspush
-\titlecontents{figure}[0mm]{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}{}{\hfill\contentspage}
+\titlecontents{figure}[0mm]
+{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}
+{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}
+{}{\titlerule*[0.5pc]{.} \contentspage}
 
 %  Newcommand each required page
 \newcommand{\makecover}{
