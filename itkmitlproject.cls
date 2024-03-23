@@ -302,7 +302,7 @@
         \large{\textbf{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT \\
                 OF THE REQUIREMENT FOR THE DEGREE OF \\
                 BACHELOR OF SCIENCE PROGRAM IN INFORMATION TECHNOLOGY \\
-                FACULTY OF INFORMATION TECHNOLOGY \\
+                SCHOOL OF INFORMATION TECHNOLOGY \\
                 KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG \\
                 \Sem /\AcaYAD}}
     \end{center}
@@ -314,7 +314,7 @@
     \null\vfill
     \begin{large}
         \noindent\textbf{COPYRIGHT \CopyrightYAD \\
-            FACULTY OF INFORMATION TECHNOLOGY \\
+            SCHOOL OF INFORMATION TECHNOLOGY \\
             KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG}
     \end{large}
 }
