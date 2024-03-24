@@ -14,9 +14,6 @@ jobs:
       - name: Extract fonts from zip
         run: unzip fonts.zip
 
-      - name: Output fonts in zip
-        run: ls fonts/
-
       - uses: xu-cheng/latex-action@v3
         with:
           root_file: full-report.tex
