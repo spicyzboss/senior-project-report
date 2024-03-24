@@ -21,12 +21,6 @@ jobs:
           extra_fonts: |
             ./fonts/*.ttf
 
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
-        with:
-          name: PDF
-          path: full-report.pdf
-
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
