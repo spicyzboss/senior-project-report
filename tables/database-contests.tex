@@ -5,9 +5,19 @@
     \hline
     \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
     \hline
-    id & VARCHAR & 40 & primary\_key & รหัสการแข่งขัน \\
+    id & int & 4 & primary\_key & รหัสการแข่งขัน \\
     \hline
     name & VARCHAR & 100 & required & ชื่อการแข่งขัน \\
+    \hline
+    slug & VARCHAR & 100 & required & รอแก้ \\
+    \hline
+    description & TEXT & 2 - 64Kb & - & คำอธิบายการแข่งขัน \\
+    \hline
+    start\_date & TIMESTAMP & 4 & required & เวลาที่เริ่มการแข่งขัน \\
+    \hline
+    end\_date & TIMESTAMP & 4 & required & เวลาที่สิ้นสุดการแข่งขัน \\
+    \hline
+    status & ENUM & 1 & required  & เวลาที่เริ่มการแข่งขัน \\
     \hline
     created\_at & TIMESTAMP & 4 & - & เวลาที่สร้างข้อมูล \\
     \hline

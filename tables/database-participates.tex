@@ -1,0 +1,21 @@
+\begin{table}[H]
+    \caption{พจนานุกรมข้อมูลของตาราง participates}
+    \label{tab:database-participates}
+    \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
+    \hline
+    \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
+    \hline
+    student\_id & VARCHAR & 40 & primary\_key, foreign\_key & รหัสนักเรียน \\
+    \hline
+    contest\_id & INT & 4 & primary\_key, foreign\_key & รหัสการแข่งขัน \\
+    \hline
+    username & VARCHAR & 40 & required & ชื่อผู้ใช้ \\
+    \hline
+    password & VARCHAR & 40 & required & รหัสผ่าน \\
+    \hline
+    created\_at & TIMESTAMP & 4 & required & เวลาที่สร้างข้อมูล \\
+    \hline
+    updated\_at & TIMESTAMP & 4 & required & เวลาที่แก้ไขข้อมูลล่าสุด \\
+    \hline
+    \end{tabularx}
+\end{table}

@@ -1,19 +1,13 @@
 \begin{table}[H]
-    \caption{พจนานุกรมข้อมูลของตาราง schools}
-    \label{tab:database-schools}
+    \caption{พจนานุกรมข้อมูลของตาราง database\_contest\_allow\_grades}
+    \label{tab:database-contest-allow_grades}
     \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
     \hline
     \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
     \hline
-    id & INT & 4 & primary\_key & รหัสโรงเรียน \\
+    grade\_id & INT & 4 & primary\_key, foreign\_key & รหัสระดับชั้น \\
     \hline
-    name & VARCHAR & 200 & required & ชื่อโรงเรียน \\
-    \hline
-    province & VARCHAR & 150 & - & จังหวัด \\
-    \hline
-    district & VARCHAR & 150 & - & เขต\/อำเภอ \\
-    \hline
-    sub\_district & VARCHAR & 150 & - & แขวง\/ตำบล \\
+    contest\_id & INT & 4 & primary\_key, foreign\_key & รหัสการแข่งขัน \\
     \hline
     created\_at & TIMESTAMP & 4 & - & เวลาที่สร้างข้อมูล \\
     \hline
