@@ -207,7 +207,7 @@
 }
 
 \titlecontents{table}[0mm]
-{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}
+{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listtablename}}
 {\contentspush{\hspace{1ex}\thecontentslabel\hspace{2mm}}}
 {}{\titlerule*[0.5pc]{.} \contentspage}
 
