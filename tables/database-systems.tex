@@ -1,13 +1,13 @@
 \begin{table}[H]
     \caption{พจนานุกรมข้อมูลของตาราง systems}
     \label{tab:database-systems}
-    \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
+    \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2.15cm} | X | }
     \hline
     \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
     \hline
     name & VARCHAR & 100 & primary\_key & ชื่อระบบย่อย \\
     \hline
-    is\_online & TINTINT & 1 & required & สถานะของระบบย่อย \\
+    is\_online & TINYINT & 1 & - & สถานะของระบบย่อย \\
     \hline
     created\_at & TIMESTAMP & 4 & - & เวลาที่สร้างข้อมูล \\
     \hline

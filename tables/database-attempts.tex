@@ -1,13 +1,13 @@
 \begin{table}[H]
     \caption{พจนานุกรมข้อมูลของตาราง attempts}
     \label{tab:database-attempts}
-    \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
+    \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2.05cm} | X | }
     \hline
     \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
     \hline
-    id & INT & 4 & primary\_key & รหัสของคำตอบในการตอบคำถาม \\
+    id & INT & 4 & primary\_key & รหัสของคำตอบ \\
     \hline
-    participate_username & VARCHAR & 40 & foreign\_key & ชื่อผู้ใช้ของผู้เข้าร่วม \\
+    participate\_username & VARCHAR & 40 & foreign\_key & ชื่อผู้ใช้ของผู้เข้าร่วม \\
     \hline
     score & INT & 4 & required & คะแนนรวมของคำตอบ \\
     \hline
@@ -20,4 +20,3 @@
     updated\_at & TIMESTAMP & 4 & - & เวลาที่แก้ไขข้อมูลล่าสุด \\
     \hline
     \end{tabularx}
-\end{table}

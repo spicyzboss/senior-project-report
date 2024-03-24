@@ -1,7 +1,7 @@
 \begin{table}[H]
     \caption{พจนานุกรมข้อมูลของตาราง contests}
     \label{tab:database-contests}
-    \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
+    \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2.15cm} | X | }
     \hline
     \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
     \hline
@@ -9,7 +9,7 @@
     \hline
     name & VARCHAR & 100 & required & ชื่อการแข่งขัน \\
     \hline
-    slug & VARCHAR & 100 & required & รอแก้ \\
+    slug & VARCHAR & 100 & required & โค้ดของการแข่งขัน \\
     \hline
     description & TEXT & 2 - 64Kb & - & คำอธิบายการแข่งขัน \\
     \hline
@@ -17,7 +17,7 @@
     \hline
     end\_date & TIMESTAMP & 4 & required & เวลาที่สิ้นสุดการแข่งขัน \\
     \hline
-    status & ENUM & 1 & required  & เวลาที่เริ่มการแข่งขัน \\
+    status & ENUM & 1 & -  & สถานะการแข่งขัน \\
     \hline
     created\_at & TIMESTAMP & 4 & - & เวลาที่สร้างข้อมูล \\
     \hline

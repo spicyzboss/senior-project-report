@@ -13,12 +13,12 @@
 
 \subsection{ระบบจัดการรายชื่อของผู้สมัคร}
 
-ระบบจัดการรายชื่อของผู้สมัครแบ่งเป็น 2 ระบบย่อย ได้แก่
+ระบบจัดการรายชื่อของผู้สมัครแบ่งเป็น 3 ระบบย่อย ได้แก่
 
 \begin{enumerate}
     \item ระบบจะต้องสามารถเพิ่มข้อมูลของผู้สมัครลงในฐานข้อมูลได้
     \item ระบบจะต้องสามารถลบข้อมูลของผู้สมัครออกจากฐานข้อมูลได้
-    % \item ระบบจะต้องสามารถแก้ไขข้อมูลของผู้สมัครได้
+    \item ระบบจะต้องสามารถแก้ไขข้อมูลของผู้สมัครได้
 \end{enumerate}
 
 \section{คำอธิบายของระบบ}
@@ -48,33 +48,70 @@
 
 สำหรับแต่ละ Use Case เว็บจะสร้างการร้องขอไปที่ API แต่ละตัว เพื่อให้สามารถทำงานได้ตามความต้องการของระบบ และสามารถอ่าน-เขียนข้อมูลลงไปที่ฐานข้อมูลสัมพันธ์ได้
 
-\newpage
+\subsection{ระบบแสดงสถิติ}
 
-\subsection{แผนภาพแสดงการทำงานของผู้ใช้ระบบ (Use Case Diagram)}
-
-ทางผู้จัดทำระบบแสดงสถิติและจัดการรายชื่อของผู้สมัครแข่งขันทดสอบทักษะการคิดเชิงคำนวณ ได้สกัดความต้องการออกมาเป็น Use Case ทั้งหมด 8 อัน โดยจะแบ่งเป็น 2 บทบาทการใช้งาน คือ ผู้ประสานงานและผู้ดูแลระบบ ดังแสดงในรูปที่ \ref{fig:use-case-diagram}
+ผู้จัดทำได้สกัดความต้องการของระบบแสดงสถิติออกมาเป็น Use Case ทั้งหมด 6 อัน โดยจะแบ่งเป็น 2 บทบาทการใช้งาน คือ ผู้ประสานงานและผู้ดูแลระบบ ดังแสดงในรูปที่ \ref{fig:package-display-stats-diagram}
+โดยในระบบแสดงสถิติจะประกอบไปด้วย Use Case ดังนี้
+\begin{enumerate}
+    \item Use case ดูข้อมูลสถิติการทดสอบ ดังแสดงในตารางที่ \ref{tab:usecase-read-stats}
+    \item Use case ส่งออกข้อมูลสถิติการทดสอบ ดังแสดงในตารางที่ \ref{tab:usecase-export-stats}
+    \item Use case แก้ไขข้อมูลสถิติการทดสอบ ดังแสดงในตารางที่ \ref{tab:usecase-edit-stats}
+    \item Use case ส่งออกชื่อผู้ใช้และรหัสผ่านสำหรับ Moodle ดังแสดงในตารางที่ \ref{tab:usecase-export-moodle-student}
+    \item Use case ดูคะแนนการทดสอบ ดังแสดงในตารางที่ \ref{tab:usecase-read-result}
+    \item Use case เพิ่มข้อมูลสถิติการทดสอบ ดังแสดงในตารางที่ \ref{tab:usecase-import-stats}
+\end{enumerate}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=100mm,scale=1.0]{diagrams/use-case-diagram.png}
-    \caption{แผนภาพแสดงการทำงานของผู้ใช้ระบบจัดการแข่งขันบีบราส}
-    \label{fig:use-case-diagram}
+    \includegraphics[width=100mm,scale=1.0]{diagrams/package-display-stats.png}
+    \caption{แผนภาพแสดงระบบแสดงสถิติ}
+    \label{fig:package-display-stats-diagram}
 \end{figure}
 
-\newpage
+\subsection{ระบบจัดการรายชื่อผู้เข้าแข่งขัน}
+
+ผู้จัดทำได้สกัดความต้องการของระบบจัดการรายชื่อผู้เข้าแข่งขันออกมาเป็น Use Case ทั้งหมด 11 อัน โดยจะแบ่งเป็น 2 บทบาทการใช้งาน คือ ผู้ประสานงานและผู้ดูแลระบบ ดังแสดงในรูปที่ \ref{fig:package-manage-students-diagram}
+โดยในระบบจัดการรายชื่อผู้เข้าแข่งขันจะประกอบไปด้วย Use Case ดังนี้
+\begin{enumerate}
+    \item Use case ค้นหารายชื่อนักเรียน ดังแสดงในตารางที่ \ref{tab:usecase-search-student}
+    \item Use case อ่านรายชื่อนักเรียน ดังแสดงในตารางที่ \ref{tab:usecase-read-student}
+    \item Use case ลบรายชื่อนักเรียน ดังแสดงในตารางที่ \ref{tab:usecase-remove-student}
+    \item Use case แก้ไขข้อมูลนักเรียน ดังแสดงในตารางที่ \ref{tab:usecase-edit-student}
+    \item Use case เพิ่มรายชื่อนักเรียน ดังแสดงในตารางที่ \ref{tab:usecase-create-student}
+    \item Use case สร้างชื่อผู้ใช้และรหัสผ่านสำหรับ Moodle ดังแสดงในตารางที่ \ref{tab:usecase-generate-user}
+    \item Use case เพิ่มรายชื่อนักเรียนแบบกลุ่ม ดังแสดงในตารางที่ \ref{tab:usecase-create-batch-student}
+    \item Use case อ่านข้อมูลประเภทการทดสอบ ดังแสดงในตารางที่ \ref{tab:usecase-read-contest}
+    \item Use case เพิ่มประเภทการทดสอบ ดังแสดงในตารางที่ \ref{tab:usecase-create-contest}
+    \item Use case ส่งออกรายชื่อนักเรียน ดังแสดงในตารางที่ \ref{tab:usecase-export-student}
+    \item Use case ลบประเภทการทดสอบ ดังแสดงในตารางที่ \ref{tab:usecase-remove-contest}
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=100mm,scale=1.0]{diagrams/package-manage-students.png}
+    \caption{แผนภาพแสดงระบบจัดการรายชื่อผู้เข้าแข่งขัน}
+    \label{fig:package-manage-students-diagram}
+\end{figure}
 
 \subsection{Use Case Specification}
 
+\input{tables/usecase-read-stats}
+\input{tables/usecase-export-stats}
+\input{tables/usecase-edit-stats}
+\input{tables/usecase-export-moodle-student}
+\input{tables/usecase-read-result}
+\input{tables/usecase-import-stats}
 \input{tables/usecase-search-student}
 \input{tables/usecase-read-student}
 \input{tables/usecase-remove-student}
+\input{tables/usecase-edit-student}
 \input{tables/usecase-create-student}
+\input{tables/usecase-generate-user}
 \input{tables/usecase-create-batch-student}
 \input{tables/usecase-read-contest}
 \input{tables/usecase-create-contest}
+\input{tables/usecase-export-student}
 \input{tables/usecase-remove-contest}
-
-\newpage
 
 \section{โครงสร้างฐานข้อมูลในระบบ (Database Schema)}
 
@@ -102,9 +139,9 @@
 \input{tables/database-systems}
 \input{tables/database-users}
 \input{tables/database-coordinators}
-\input{tables/database-contest-allow_grades}
+\input{tables/database-contest-allow-grades}
 \input{tables/database-attempts}
 \input{tables/database-attempt-details}
 \input{tables/database-participates}
-\input{tables/database-questions.tex}
+\input{tables/database-questions}
 

@@ -1,0 +1,17 @@
+\begin{table}[H]
+    \caption{พจนานุกรมข้อมูลของตาราง contest\_allow\_grades}
+    \label{tab:database-contest-allow_grades}
+    \begin{tabularx}{\textwidth}{ | p{2.15cm} | p{2.20cm} | p{2.45cm} | p{2.15cm} | X | }
+    \hline
+    \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
+    \hline
+    grade\_id & INT & 4 & primary\_key, foreign\_key & รหัสระดับชั้น \\
+    \hline
+    contest\_id & INT & 4 & primary\_key, foreign\_key & รหัสการแข่งขัน \\
+    \hline
+    created\_at & TIMESTAMP & 4 & - & เวลาที่สร้างข้อมูล \\
+    \hline
+    updated\_at & TIMESTAMP & 4 & - & เวลาที่แก้ไขข้อมูลล่าสุด \\
+    \hline
+    \end{tabularx}
+\end{table}

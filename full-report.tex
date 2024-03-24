@@ -9,8 +9,8 @@
 \usepackage{hyperref}
 \usepackage{hyphenat}
 \usepackage[numbers,square]{natbib}
-\usepackage{lipsum}
 \usepackage{float}
+\usepackage{multirow}
 
 % \useEnglish
 \useThai
@@ -46,9 +46,9 @@
 %12. ปีการศึกษา พ.ศ.
 \newcommand{\AcaY}{2566}
 %13. ปีการศึกษา ค.ศ.
-\newcommand{\AcaYAD}{2024}
+\newcommand{\AcaYAD}{2023}
 %14. วันส่งรายงาน
-\newcommand{\SubD}{29 ตุลาคม พ.ศ. 2566}
+\newcommand{\SubD}{24 มีนาคม พ.ศ. 2567}
 %15. Copyright year (AD)
 \newcommand{\CopyrightYAD}{2024}
 
@@ -95,11 +95,11 @@
     \mainmatter
     \lhead{}\rhead{\thepage}\chead{}\lfoot{}\cfoot{}\rfoot{}
 
-    \include{chapters/chapter1}
-    \include{chapters/chapter2}
-    \include{chapters/chapter3}
-    \include{chapters/chapter4}
-    \include{chapters/chapter5}
+    \input{chapters/chapter1}
+    \input{chapters/chapter2}
+    \input{chapters/chapter3}
+    \input{chapters/chapter4}
+    \input{chapters/chapter5}
 
     \clearpage
 
