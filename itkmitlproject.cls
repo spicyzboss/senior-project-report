@@ -168,13 +168,13 @@
 \titlecontents{chapter}[0mm]
 {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
 {\chaptername\hspace{1ex}\thecontentslabel\hspace{2mm}}
-{}{\hfill \contentspage}
+{}{\titlerule*[0.5pc]{.} \contentspage}
 
 % tocitem format for section
 \titlecontents{section}[0mm]
 {\stepcounter{tocitem}\tocheadcont{\thelinenumber}{\thetocitem}{\contentsname}}
 {\hspace{6ex}\thecontentslabel\hspace{2mm}}{\hspace{6ex}\thecontentslabel\hspace{2mm}}
-{\hfill \contentspage}
+{\titlerule*[0.5pc]{.} \contentspage}
 
 % ##### LOT Overrided
 \newcommand{\lotheadcont}[3]{
@@ -206,7 +206,10 @@
     \cleardoublepage
 }
 
-\titlecontents{table}[0mm]{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}{}{\hfill \contentspage}
+\titlecontents{table}[0mm]
+{\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}
+{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}
+{}{\titlerule*[0.5pc]{.} \contentspage}
 
 % ##### LOF Overridden
 \newcommand{\lofheadcont}[3]{
@@ -240,7 +243,10 @@
 }
 
 % Indent the next line of the entry by the width of the label with \contentspush
-\titlecontents{figure}[0mm]{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}{}{\hfill\contentspage}
+\titlecontents{figure}[0mm]
+{\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}
+{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}
+{}{\titlerule*[0.5pc]{.} \contentspage}
 
 %  Newcommand each required page
 \newcommand{\makecover}{
@@ -296,7 +302,7 @@
         \large{\textbf{A PROJECT SUBMITTED IN PARTIAL FULFILLMENT \\
                 OF THE REQUIREMENT FOR THE DEGREE OF \\
                 BACHELOR OF SCIENCE PROGRAM IN INFORMATION TECHNOLOGY \\
-                FACULTY OF INFORMATION TECHNOLOGY \\
+                SCHOOL OF INFORMATION TECHNOLOGY \\
                 KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG \\
                 \Sem /\AcaYAD}}
     \end{center}
@@ -308,7 +314,7 @@
     \null\vfill
     \begin{large}
         \noindent\textbf{COPYRIGHT \CopyrightYAD \\
-            FACULTY OF INFORMATION TECHNOLOGY \\
+            SCHOOL OF INFORMATION TECHNOLOGY \\
             KING MONGKUT’S INSTITUTE OF TECHNOLOGY LADKRABANG}
     \end{large}
 }
@@ -493,7 +499,7 @@
 
 \patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
-\def\bibindent{2.3em}
+\def\bibindent{2ex}
 \let\old@biblabel\@biblabel
 \def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
 \let\old@bibitem\bibitem
