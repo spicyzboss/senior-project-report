@@ -77,12 +77,12 @@
 \XeTeXlinebreaklocale "th_TH" %สำหรับตัดคำ
 \XeTeXlinebreakskip = 0pt plus 1pt
 \linespread{1.3}
-\setmainfont{Angsana New}[
+\setmainfont{TH Sarabun New}[
 	Path = fonts/,
-	UprightFont = angsana,
-	ItalicFont = angsana-italic,
-	BoldFont = angsana-bold,
-	BoldItalicFont = angsana-bold-italic,
+	UprightFont = sarabun-new,
+	ItalicFont = sarabun-new-italic,
+	BoldFont = sarabun-new-bold,
+	BoldItalicFont = sarabun-new-bold-italic,
 	Extension = .ttf,
 	Script=Thai,
 	Scale=1.45
@@ -208,7 +208,7 @@
 
 \titlecontents{table}[0mm]
 {\stepcounter{lotitem}\lotheadcont{\thelinenumber}{\thelotitem}{\listftablename}}
-{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}
+{\contentspush{\hspace{1ex}\thecontentslabel\hspace{2mm}}}
 {}{\titlerule*[0.5pc]{.} \contentspage}
 
 % ##### LOF Overridden
@@ -245,7 +245,7 @@
 % Indent the next line of the entry by the width of the label with \contentspush
 \titlecontents{figure}[0mm]
 {\stepcounter{lofitem}\lofheadcont{\thelinenumber}{\thelofitem}{\listfigurename}}
-{\contentspush{\hspace{5ex}\thecontentslabel\hspace{2mm}}}
+{\contentspush{\hspace{1ex}\thecontentslabel\hspace{2mm}}}
 {}{\titlerule*[0.5pc]{.} \contentspage}
 
 %  Newcommand each required page
