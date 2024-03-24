@@ -1,19 +1,21 @@
 \begin{table}[H]
-    \caption{พจนานุกรมข้อมูลของตาราง schools}
-    \label{tab:database-schools}
+    \caption{พจนานุกรมข้อมูลของตาราง questions}
+    \label{tab:database-questions}
     \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
     \hline
     \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
     \hline
-    id & INT & 4 & primary\_key & รหัสโรงเรียน \\
+    id & INT & 4 & primary\_key & รหัสคำถาม \\
     \hline
-    name & VARCHAR & 200 & required & ชื่อโรงเรียน \\
+    name & VARCHAR & 255 & required & ชื่อคำถาม \\
     \hline
-    province & VARCHAR & 150 & - & จังหวัด \\
+    score & INT & 4 & required & คะแนนคำถาม \\
     \hline
-    district & VARCHAR & 150 & - & เขต\/อำเภอ \\
+    penalty & FLOAT & 8 & required & คะแนนที่ลบ \\
     \hline
-    sub\_district & VARCHAR & 150 & - & แขวง\/ตำบล \\
+    type & VARCHAR & 20 & required & ประเภทคำถาม \\
+    \hline
+    preview\_url & TEXT & 2 - 64Kb & required & ลิงก์เพื่ออ่านคำถาม \\
     \hline
     created\_at & TIMESTAMP & 4 & - & เวลาที่สร้างข้อมูล \\
     \hline

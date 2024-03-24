@@ -1,19 +1,17 @@
 \begin{table}[H]
-    \caption{พจนานุกรมข้อมูลของตาราง schools}
-    \label{tab:database-schools}
+    \caption{พจนานุกรมข้อมูลของตาราง attempt\_details}
+    \label{tab:database-attempt-details}
     \begin{tabularx}{\textwidth}{ | p{2.25cm} | p{2.20cm} | p{2.45cm} | p{2cm} | X | }
     \hline
     \textbf{ชื่อข้อมูล} & \textbf{ประเภทข้อมูล} & \textbf{ขนาดของข้อมูล} & \textbf{ข้อจำกัด} & \textbf{คำอธิบาย} \\
     \hline
-    id & INT & 4 & primary\_key & รหัสโรงเรียน \\
+    id & INT & 4 & primary\_key & รหัสรายละเอียดคำตอบในการตอบคำถาม \\
     \hline
-    name & VARCHAR & 200 & required & ชื่อโรงเรียน \\
+    attempt\_id & INT & 4 & foreign\_key & รหัสคำตอบ \\
     \hline
-    province & VARCHAR & 150 & - & จังหวัด \\
+    question\_id & INT & 4 & foreign\_key & รหัสคำถาม \\
     \hline
-    district & VARCHAR & 150 & - & เขต\/อำเภอ \\
-    \hline
-    sub\_district & VARCHAR & 150 & - & แขวง\/ตำบล \\
+    score & INT & 4 & required & คะแนนของคำตอบ \\
     \hline
     created\_at & TIMESTAMP & 4 & - & เวลาที่สร้างข้อมูล \\
     \hline
