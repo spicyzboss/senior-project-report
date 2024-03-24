@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Extract fonts from zip
-        run: unzip fonts.zip -d fonts
+        run: unzip fonts.zip
 
       - name: Output fonts in zip
         run: ls fonts/
