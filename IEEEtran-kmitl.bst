@@ -2010,7 +2010,7 @@ FUNCTION {electronic}
   format.authors output
   name.or.dash
   format.date.electronic output
-  format.article.title.electronic output
+  format.article.title.electronic output bold
   format.howpublished "howpublished" bibinfo.check output
   format.organization "organization" bibinfo.check output
   format.address "address" bibinfo.check output

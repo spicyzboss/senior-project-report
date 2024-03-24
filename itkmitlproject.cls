@@ -499,7 +499,7 @@
 
 \patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
 \patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
-\def\bibindent{2.3em}
+\def\bibindent{2ex}
 \let\old@biblabel\@biblabel
 \def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
 \let\old@bibitem\bibitem
