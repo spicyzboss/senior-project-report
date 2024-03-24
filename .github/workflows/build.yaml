@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Extract fonts from zip
-        run: unzip fonts.zip
+        run: unzip fonts.zip -d fonts
 
       - uses: xu-cheng/latex-action@v3
         with:
