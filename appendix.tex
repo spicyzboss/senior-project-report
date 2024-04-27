@@ -1,3 +1,49 @@
-\chapter{เรื่องที่หนึ่ง}
+\chapter{วิธีการติดตั้งเพื่อใช้งานใน Local Environment}
 
-\lipsum[1-8]
+\begin{enumerate}
+	\item ดาวน์โหลดซอร์สโค้ดจาก Repository ที่ URL https://github.com/deeptech-kmitl/project-beaver
+	\item ดาวน์โหลดและติดตั้ง Node.js ตั้งแต่เวอร์ชัน 20 เป็นต้นไป
+	\item ดาวน์โหลดและติดตั้ง PNPM ตั้งแต่เวอร์ชัน 8 เป็นต้นไป
+	\item ดาวน์โหลดและติดตั้ง Go ตั้งแต่เวอร์ชัน 1.21 เป็นต้นไป
+	\item ดาวน์โหลดและติดตั้ง Docker ตั้งแต่เวอร์ชัน 24 เป็นต้นไป
+	\item ดาวน์โหลดและติดตั้ง Google Cloud CLI ตั้งแต่เวอร์ชัน 444 เป็นต้นไป
+	\item ติดตั้ง Package dependencies ด้วยคำสั่ง pnpm install
+	\item ยืนยันตัวตนผู้เข้าใช้งาน Google Cloud Environment ด้วยคำสั่ง gcloud config set auth/impersonate\_service\_account 335637802412-compute@developer.gserviceaccount.com
+	\item สร้าง Local Database Environment ด้วยคำสั่ง docker compose up -d
+	\item เปิดเซิร์ฟเวอร์สำหรับเว็บไซต์ด้วยคำสั่ง pnpm nx serve web
+	\item สร้าง Binary เพื่อใช้เปิดระบบด้วยคำสั่ง pnpm nx run-many -t build --projects="tag:api" --parallel=10
+	\item เปิดเซิร์ฟเวอร์สำหรับระบบหลังบ้านด้วยคำสั่ง
+		GCP\_BUCKET\_NAME="coolbeaver-app-data" \
+		GCP\_UPLOAD\_PATH="user-documents/" \
+		GCP\_CERTIFICATE\_PATH="certificates/" \
+		GCP\_SERVICE\_ACCOUNT\_ID="335637802412-compute@developer.gserviceaccount.com" \
+		GCP\_PROJECT\_ID="coolbeaver" \
+		DATABASE\_URL="mysql://root:coolbeaver@localhost:3306/coolbeaver" \
+		pnpm nx run-many -t serve --projects="tag:api" --parallel=50
+	\item ทดสอบการใช้งานด้วยการเข้าไปยัง http://localhost:4200
+\end{enumerate}
+
+\chapter{วิธีการนำส่งระบบขึ้นไปยัง Google Cloud Platform}
+
+\begin{enumerate}
+	\item ดาวน์โหลดซอร์สโค้ดจาก Repository ที่ URL https://github.com/deeptech-kmitl/project-beaver
+	\item ดาวน์โหลดและติดตั้ง Node.js ตั้งแต่เวอร์ชัน 20 เป็นต้นไป
+	\item ดาวน์โหลดและติดตั้ง PNPM ตั้งแต่เวอร์ชัน 8 เป็นต้นไป
+	\item ดาวน์โหลดและติดตั้ง Go ตั้งแต่เวอร์ชัน 1.21 เป็นต้นไป
+	\item ดาวน์โหลดและติดตั้ง Docker ตั้งแต่เวอร์ชัน 24 เป็นต้นไป
+	\item ดาวน์โหลดและติดตั้ง Google Cloud CLI ตั้งแต่เวอร์ชัน 444 เป็นต้นไป
+	\item ติดตั้ง Package dependencies ด้วยคำสั่ง pnpm install
+	\item ยืนยันตัวตนผู้เข้าใช้งาน Google Cloud Environment ด้วยคำสั่ง gcloud config set auth/impersonate\_service\_account 335637802412-compute@developer.gserviceaccount.com
+	\item หากมีการเพิ่ม API ใหม่ ให้เพิ่ม Service ไปที่ tools/deployment/skaffold.yaml
+	\item หากมีการเพิ่ม API ใหม่ ให้เพิ่มไฟล์การตั้งค่า Service ไปที่ tools/deployments/services/<service-name>.yaml
+	\item หากมีการเพิ่ม API ใหม่ ให้เพิ่มการตั้งค่า Gateway ไปที่ tools/deployments/gateway/main.yaml
+	\item หากมีการเพิ่ม API ใหม่ ให้เพิ่ม Deployment Pipeline ไปที่ tools/deployments/clouddeploy.yaml
+	\item เมื่อทำการแก้ไข API เรียบร้อย ให้ปรับใช้การเปลี่ยนแปลงไปยัง Cloud Deploy ด้วยคำสั่ง gcloud deploy apply --file=tools/deployments/clouddeploy.yaml --region=asia-southeast1 --project=coolbeaver
+	\item หลังจากนั้นให้เพิ่มการตั้งค่า Gateway ด้วยคำสั่ง gcloud api-gateway api-configs create <gateway-config-name> \
+      --api=core --openapi-spec=./tools/deployments/gateway/main.yaml \
+      --project=coolbeaver --backend-auth-service-account=335637802412-compute@developer.gserviceaccount.com
+	\item เมื่อตั้งค่า Gateway สำเร็จ ให้ปรับใช้การตั้งค่าด้วยคำสั่ง gcloud api-gateway gateways update core-gateway \
+      --api=core --api-config=<gateway-config-name> \
+      --location=asia-northeast1 --project=coolbeaver
+	\item เมื่อทำเสร็จสิ้นทุกขั้นตอน สามารถบันทึกการเปลี่ยนแปลงไปยัง Repository ได้ทันที และเป็นอันจบขั้นตอนการนำส่งระบบ
+\end{enumerate}

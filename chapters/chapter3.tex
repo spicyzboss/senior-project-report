@@ -143,3 +143,21 @@
 \input{tables/database-participates}
 \input{tables/database-questions}
 
+\section{โครงสร้างการนำส่งระบบ (Deployment Architecture)}
+
+การนำส่งระบบเพื่อให้ผู้ใช้งานสามารถใช้จริงบนเว็บแอปพลิเคชันนั้น ทางผู้จัดทำได้นำส่งขึ้นบน Google Cloud Platform เพื่อให้สามารถได้เซิร์ฟเวอร์ที่เสถียร ปลอดภัย และทันสมัย โดยจะเริ่มที่
+เมื่อผู้จัดทำส่งโค้ดขึ้นไปบน GitHub Repository ระบบ Continuous Integration ของ GitHub Actions จะทำการ Build Container Image และสร้างการ Release ไปบน Cloud Deploy เพื่อเก็บ Container Image ไปยัง Artifact Repository และเริ่มการ Build Service บน Google Cloud Platform ด้วย Cloud Build ในระหว่างกระบวนการนี้ Cloud Build จะเก็บ Log ไว้บน Logging Service เมื่อ Build สำเร็จ Cloud Build จะสร้าง Rolling Release เพื่อนำไปปรับใช้กับ Cloud Run เพื่อทำการสร้าง Revision ให้สามารถใช้งานต่อได้ทันทีโดยไม่ต้องปิดเซิร์ฟเวอร์ และสามารถเข้าถึง API บน Cloud Run ได้ผ่าน Cloud API Gateway
+ดังแสดงในรูปที่ \ref{fig:deployment-architecture}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=120mm,scale=1.0]{diagrams/cloud.png}
+    \caption{แผนภาพโครงสร้างการนำส่งระบบบน Google Cloud Platform}
+    \label{fig:deployment-architecture}
+\end{figure}
+
+\subsection{ระบบย่อยทั้งหมด (Microservices)}
+
+ในการนำส่งระบบแสดงสถิติและจัดการรายชื่อของผู้สมัครแข่งขันทดสอบทักษะการคิดเชิงคำนวณ ได้ปรับใช้การพัฒนาแบบ Microservices เพื่อช่วยให้สามารถแยกการทำงานของ API ให้ชัดเจนมากขึ้น ดังตารางที่ \ref{tab:api-mapping}
+
+\input{tables/api-mapping}
