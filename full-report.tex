@@ -4,6 +4,7 @@
 \documentclass{itkmitlproject}
 
 \usepackage{afterpage}
+\usepackage{longtable}
 \usepackage{graphicx,amsmath,latexsym,amssymb,amsthm,svg}
 \usepackage{indentfirst}
 \usepackage{hyperref}
@@ -68,11 +69,14 @@
     \pagenumbering{Roman}
 
     \makeabstract{
-        Bebras เป็น Web application สำหรับคุณครูชั้นมัธยมศึกษาในการเพิ่มรายชื่อนักเรียนโดยการส่งรายชื่อนักเรียนที่ต้องการเป็นไฟล์ Excel (.xlsx) เพื่อส่งนักเรียนในรายชื่อไปแข่งขันใน Moodle จากการที่ได้ร่วมพัฒนาโปรเจกต์นี้ นักศึกษาได้รับมอบหมายให้พัฒนาในส่วนของระบบระบบแสดงสถิติและจัดการรายชื่อของผู้สมัครแข่งขันทดสอบทักษะการคิดเชิงคำนวณ ซึ่งเป็นหนึ่งในฟังก์ชันการทำงานที่สำคัญของโปรเจกต์ ซึ่งประกอบไปด้วยการแสดงสถิติคะแนนของผู้เข้าแข่งขันและสามารถจัดการรายชื่อของผู้สมัครได้แก่ การเพิ่มรายชื่อ ลบรายชื่อและแก้ไขรายชื่อ
+        Bebras เป็นการแข่งขันทดสอบทักษะการคิดเชิงคำนวณ ที่นักเรียนทั่วประเทศสามารถเข้าร่วมการทดสอบแข่งขันได้ โดยการจัดการรายชื่อผู้เข้าแข่งขันจะจัดการบนระบบเว็บแอปพลิเคชัน
+        เพื่อให้คุณครูสามารถใช้งานและเข้าถึงได้ง่ายผ่านเว็บเบราว์เซอร์และสามารถเพิ่มรายชื่อนักเรียนโดยการส่งรายชื่อนักเรียนที่ต้องการเพิ่มเป็นไฟล์ Excel (.xlsx) เพื่อส่งรายชื่อนักเรียนในรายชื่อไปแข่งขันบนระบบ Moodle
+        จากการที่ได้ร่วมพัฒนาโปรเจกต์นี้ นักศึกษาได้รับมอบหมายให้พัฒนาในส่วนของระบบแสดงสถิติและจัดการรายชื่อของผู้สมัครแข่งขันทดสอบทักษะการคิดเชิงคำนวณ
+        ซึ่งเป็นหนึ่งในฟังก์ชันการทำงานที่สำคัญของโปรเจกต์ ซึ่งประกอบไปด้วยการแสดงสถิติคะแนนของผู้เข้าแข่งขันและสามารถจัดการรายชื่อของผู้สมัคร ได้แก่ การเพิ่มรายชื่อ ลบรายชื่อและแก้ไขรายชื่อ
     }
 
     \makeabstracteng{
-        Bebras is a web application designed for middle school teachers to manage student lists by uploading student names in Excel files (.xlsx) for participation in competitions on Moodle. As part of this project, We have been tasked with developing the system's statistical display and management of applicant lists for a computational thinking skills test. This is one of the critical functionalities of the project, including displaying statistics of participant scores and the ability to manage applicant lists, such as adding, deleting, and editing names.
+        Bebras is a computational thinking skills test competition where students across the country can participate in competitive contest. The contestant list management will be managed on a Web application so that teachers can easily use and access it through a web browser and can add a list of students by submitting the list of students they want to add as an Excel file (.xlsx) to submit the list of students to compete on the Moodle. Our tasks is developing a system to display statistics and manage candidates' lists to test their computational thinking skills, which is one of the key functionalities of the project.
     }
 
     \makeack
@@ -120,8 +124,8 @@
     \bibliography{references}
     \def\inbib{0}
 
-    % \startappendix
-    % \include{appendix}
+    \startappendix
+    \include{appendix}
 
     \makeauthorbio
 \end{document}
